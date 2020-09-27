@@ -1,0 +1,977 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 67.5%;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+/* Navbar menu */
+.navbar{
+    position: fixed;
+    width: 0%;
+    height: 100vh;
+    z-index: 98;
+}
+.navbar-icon{
+    position: fixed;
+    margin-left: 10%;
+    margin-top: 5%;
+    z-index: 100;
+    cursor: pointer;
+    filter: grayscale(.7);
+}
+.navbar-icon-exit{
+    position: fixed;
+    margin-left: 10%;
+    margin-top: 5%;
+    z-index: 99;
+    cursor: pointer;
+}
+.navbar .navbar-list{
+    width: 0%;
+    opacity: 0;
+    height: 100%;
+    transition: all 500;
+}
+.navbar-list ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.navbar-list li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    background-color: rgb(96, 115, 126);
+    opacity: .7;
+    transition: all .5s;
+}
+.navbar .navbar-list li:hover{
+    opacity: 1;
+    transition: all .5s;
+}
+.navbar .navbar-list a{
+    color: rgb(241, 240, 240);
+    font-size: 1.9rem;
+    font-weight: 300;
+
+}
+/* home section */
+#home{
+    z-index: -1;
+}
+.home{
+    background-image: url('img/pexels-negative-space-169573.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+.home .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.home .logo{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    animation: animate_logo 8s forwards linear infinite;
+}
+.home .logo h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: ivory;
+}
+.home .logo h1 span{
+    color:  rgb(136, 178, 197);
+    
+}
+@keyframes animate_logo{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+}
+
+.home .information h1{
+    font-size: 4rem;
+    font-weight: 500;
+    position: absolute;
+    color: rgb(40, 74, 90);
+    background: rgba(156, 156, 168, 0.4);
+    top: 15%;
+    right: 10%;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.7);
+    box-shadow: 10px 10px 10px rgba(0,0,0,.7);
+}
+.home .top-section{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    animation: animate_top-section 1s forwards linear infinite;
+    cursor: pointer;
+    
+}
+.home .top-section a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+@keyframes animate_top-section{
+    0%{
+        transform: scale(1);
+        filter: grayscale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        filter: grayscale(1);
+        opacity: .5;
+    }
+}
+/* Education */
+#education{
+    width: 100%;
+    height: 100Vh;
+    z-index: 90;
+    background-color: rgb(89, 109, 110);
+    position: relative;
+}
+.section-title{
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+}
+.section-title h1{
+    font-size: 4rem;
+    font-weight: 300;
+    padding-top: 20px;
+    text-shadow:2px 2px 2px rgba(156, 156, 168, 0.4);
+}
+.section-title h1 span{
+    color: rgb(40, 74, 90);
+}
+.education .section{
+    width: 100%;
+    height: 100%;
+}
+.education .cards{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    z-index: 100;
+}
+.education .cards .card{
+    position: absolute;
+    cursor: pointer;
+    opacity: .7;
+    width: 200px;
+    height: 300px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.education .cards .card:nth-child(1) .card-image{
+    background-image: url('img/pexels-kevin-ku-577585.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(2) .card-image{
+    background-image: url('img/pexels-drew-williams-2657669.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(3) .card-image{
+    background-image: url('img/pexels-george-becker-374918.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(4) .card-image{
+    background-image: url('img/pexels-josh-hild-2422253.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(5) .card-image{
+    background-image: url('img/pexels-luis-quintero-2148217.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(6) .card-image{
+    background-image: url('img/pexels-lukas-574071.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(7) .card-image{
+    background-image: url('img/pexels-negative-space-160107.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(8) .card-image{
+    background-image: url('img/pexels-oleg-magni-1837592.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(9) .card-image{
+    background-image: url('img/pexels-olenka-sergienko-3819967.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .card:nth-child(10) .card-image{
+    background-image: url('img/pexels-pixabay-60582.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+}
+.education .cards .first{
+    transform: translateX(200px) rotateY(30deg) scale(.99);
+}
+.education .cards .second{
+    transform: translateX(0px) rotate(0deg) scale(1.25);
+    opacity: 1;
+}
+.education .cards .third{
+    transform: translateX(-200px) rotateY(-30deg) scale(.99);
+}
+.education .cards .fourth{
+    transform: translateX(-255px) rotateY(-50deg) translateX(-150px);;
+}
+.education .cards .fifth{
+    transform: translate3D(-350px, -30px, -300px)  rotateY(60deg) ;
+}
+.education .cards .sixth{
+    transform: translate3D(-200px, -30px, -350px)  rotateY(30deg) scale(.99);
+    
+}
+.education .cards .seventh{
+    transform: translate3D(0px, -30px, -400px) ;
+    
+}
+.education .cards .eights{
+    transform: translate3D(200px, -30px, -350px) rotateY(-30deg); 
+}
+.education .cards .nineth{    
+    transform: translate3D(350px, -30px, -300px) rotateY(-60deg);
+    
+}
+.education .cards .tenth{
+    transform: translateX(255px) rotateY(50deg) translateX(150px);
+}
+
+.education .card .card-info{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(24, 39, 48);
+    text-align: center;
+}
+.education .card .card-info h1{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgb(241, 240, 240);
+}
+.education .card .card-info h3{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(241, 240, 240);
+}
+
+/* history */
+.history{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(89, 109, 110);
+}
+.history .container{
+    width: 80%;
+    height: 100%;
+}
+.history .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.history .cards .each-card{
+    position: relative;
+    width: 100%;
+    margin: 50px auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.history .card{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    background-color: rgb(24, 39, 48);
+    cursor: pointer;
+    transition: all 1s;
+    border: 1px solid rgb(233, 233, 233);
+}
+.history .card1 .main{
+    transform: rotate(0deg);
+    z-index: 10;
+}
+.history .card1 .main .img-side,.history .card1 .main-secondary .img-side, .history .card1 .main-last .img-side{
+    background-image: url('img/pexels-buro-millennial-1438072.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card1 .main-secondary{
+    transform: rotate(20deg);
+}
+.history .card1 .main-last{
+    transform: rotate(-20deg);
+}
+.history .card1 .secondary{
+    transform: rotate(20deg);
+}
+.history .card1 .secondary .img-side, .history .card1 .secondary-main .img-side{
+    background-image: url('img/pexels-element-digital-1370298.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card1 .secondary-main{
+    transform: rotate(00deg);
+    z-index: 10;
+}
+.history .card1 .last{
+    transform: rotate(-20deg);
+}
+.history .card1 .last .img-side, .history .card1 .last-main .img-side{
+    background-image: url('img/pexels-pixabay-159775.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card1 .last-main{
+    transform: rotate(0deg);
+    z-index: 10;
+}
+
+.history .card2 .main{
+    transform: rotate(0deg);
+    z-index: 10;
+}
+.history .card2 .main .img-side,.history .card2 .main-secondary .img-side,.history .card2 .main-last .img-side{
+    background-image: url('img/pexels-pixabay-207697.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card2 .main-secondary{
+    transform: rotate(20deg);
+}
+.history .card2 .main-last{
+    transform: rotate(-20deg);
+}
+.history .card2 .secondary{
+    transform: rotate(20deg);
+}
+.history .card2 .secondary .img-side, .history .card2 .secondary-main .img-side{
+    background-image: url('img/pexels-pixabay-267885.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card2 .secondary-main{
+    transform: rotate(00deg);
+    z-index: 10;
+}
+.history .card2 .last{
+    transform: rotate(-20deg);
+}
+.history .card2 .last .img-side,.history .card1 .last-main .img-side{
+    background-image: url('img/pexels-stefan-lorentz-668137.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+.history .card2 .last-main{
+    transform: rotate(0deg);
+    z-index: 10;
+}
+
+.history .card h1{
+    color: rgb(153, 166, 167);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.history .card p{
+    color: rgb(233, 233, 233);
+    font-size: .7rem;
+    font-weight: 400;
+}
+/* Intersts */
+.interests{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(89, 109, 110);
+}
+.interests .container{
+    width: 80%;
+    height: 100%;
+}
+.interests .cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.interests .each-card{
+    width: 70%;
+    height: 46%;
+    margin: 2% auto;
+    background-color: rgb(40, 74, 90);
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 0px 20px 20px 0px;
+}
+.interests .each-card .card{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.interests .each-card .img-side{
+    width: 70%;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(.8);
+    transition: all .5s;
+}
+.interests .each-card:nth-child(1) .img-side{
+    background-image: url('img/pexels-pixabay-270085.jpg');
+}
+.interests .each-card:nth-child(3) .img-side{
+    background-image: url('img/pexels-jonathan-petersson-399187.jpg');
+}
+.interests .each-card .inform-side{
+    width: 30%;
+}
+.interests .btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(137, 149, 150);
+    animation: animate_btn forwards infinite linear 1s;
+    cursor: pointer;
+}
+@keyframes animate_btn{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.3);
+        opacity: .3;
+    }
+}
+.interests .btn1{
+    top: 40%;
+    right: 18%;
+}
+.interests .btn1:hover{
+    animation: animate_btn 1 forwards;
+}
+.interests .btn2{
+    top: 90%;
+    right: 18%;
+}
+.interests .btn2:hover{
+    animation: animate_btn 1 forwards;
+}
+.interests .inform-side{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.interests .inform-side h1{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgb(254, 255, 255);
+}
+.interests .inform-side p{
+    font-size: .8rem;
+    font-weight: 300;
+    color: rgb(190, 233, 233);
+}
+/* Contacts */
+.contacts{
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(89, 109, 110);
+}
+.container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.container .picture{
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    background-image: url("img/pexels-stephan-müller-1473215.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.container .main-card{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-image: linear-gradient(rgb(87, 143, 175),rgb(24, 39, 48));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .main-card .inform h1{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+a{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.container .icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin:5% auto;
+}
+.contacts .icons a{
+    width: 15%;
+    margin: 0px auto;
+    filter: grayscale(1);
+    transition: all .5s;
+}
+.contacts .icons a:hover{
+    filter: grayscale(0);
+}
+.contacts .button{
+    width: 25%;
+    height: 7%;
+    background-color: rgb(241, 240, 240);
+    text-align: center;
+    box-shadow: 5px 5px 5px rgb(24, 39, 48);
+    cursor: pointer;
+}
+.contacts .button:hover{
+    box-shadow: 0px 0px 0px;
+}
+.contacts .button h1{
+    color: rgb(40, 74, 90);
+    font-weight: 300;
+}
+.contacts .message-box{
+    opacity: 0;
+    z-index: -2;
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    background-color: rgb(87, 143, 175);
+    border: 10px solid rgb(24, 39, 48);
+    text-align: center;
+    transition: all .5s;
+}
+.contacts textarea{
+    max-width: 80%;
+    margin: auto;
+    width: 80%;
+    display: block;
+    max-height: 400px;
+    margin-top: 5%;
+}
+.contacts .message-box .buttons{
+    display: flex;
+    width: 50%;
+    padding: 5px;
+    margin: 2px auto;
+}
+.contacts .message-box .button{
+    width: 48%;
+    margin: 0px auto;
+}
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: rgb(24, 39, 48);
+    text-align: center;
+}
+footer h1{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+footer h5{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* Media queery */
+@media screen and (max-width:700px){
+    .home .information h1{
+        font-size: 3rem;
+    }
+    .section-title h1{
+        font-size: 3rem;
+    }
+    .education .cards .card {
+        width: 180px;
+        height: 270px;
+    }
+    .history .card {
+        width: 50%;
+        height: 50%;   
+    }
+    .interests .each-card {
+        width: 90%;
+        height: 46%;
+    }
+}
+@media screen and (max-width:650px){
+    .education .cards .card {
+        width: 160px;
+        height: 240px;
+    }
+    .history .card {
+        width: 60%;
+        height: 50%;   
+    }
+    .education .card .card-info h1{
+        font-size: 1.1rem;
+    }
+    .education .card .card-info h3{
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width:600px){
+    .home .information h1{
+        font-size: 2.5rem;
+    }
+    .section-title h1{
+        font-size: 2.5rem;
+    }
+    .education{
+        overflow: hidden;
+    }
+    .education .cards .card {
+        width: 140px;
+        height: 210px;
+    }
+    .history .card {
+        width: 70%;
+        height: 50%;   
+    }
+    .interests .each-card {
+        width: 90%;
+        height: 44%;
+        margin: 3%;
+    }
+    .interests .inform-side p {
+        font-size: .5rem;
+        font-weight: 400;
+        color: rgb(190, 233, 233);
+    }
+    .contacts .main-card .inform h1 {
+        font-size: 1rem;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+    }
+    .contacts .button {
+        width: 35%;
+        height: 7%;
+    }
+    footer h1{
+        font-size: 1.1rem;
+    }
+
+    footer h5{
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width:550px){
+    .history{
+        height: 140vh;
+    }
+    .history .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .history .card {
+        width: 40%;
+        height: 100%;
+    }
+    .interests .inform-side h1 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .interests .inform-side p {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+    .contacts .main-card .inform h1 {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+    .contacts a{
+        font-size: .8rem;
+    }
+    .contacts .icons a img {
+        width: 40px;
+        height: 40px;
+    }
+    .contacts .button h1 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .message-box label{
+        font-size: .7rem;
+    }
+    .interests .btn {
+        width: 20px;
+        height: 20px;
+        
+    }
+}
+@media screen and (max-width:500px){
+    .history .card {
+        width: 50%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 450px){
+    .section-title h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .home .information h1 {
+        font-size: 2rem;
+    }
+    .history .card {
+        width: 60%;
+        height: 90%;
+    }
+    .interests .inform-side p {
+        font-size: .6rem;
+        font-weight: 300;
+    }
+    .container .picture {
+        width: 26%;
+        height: 20%;
+    }
+}
+@media screen and (max-width: 350px){
+    .home .logo h1 {
+        font-size: 1.5rem;
+    }
+    .interests .each-card {
+        width: 97%;
+        height: 35%;
+        margin: 10%;
+    }
+    .interests .btn1 {
+        top: 35%;
+        right: -1%;
+    }
+    .interests .btn2 {
+        top: 80%;
+        right: -1%;
+    }
+    .interests .each-card .img-side {
+        width: 60%;
+        height: 100%;
+    }
+    .interests .each-card .inform-side {
+        width: 40%;
+    }
+    .contacts .main-card .inform h1 {
+        font-size: .5rem;
+        font-weight: 300;
+    }
+    .contacts .main-card .inform a {
+        font-size: .5rem;
+        font-weight: 300;
+    }
+    .contacts .icons a img {
+        width: 35px;
+        height: 35px;
+    }
+    .contacts .button h1 {
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .top-section img{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (max-width:300px){
+    .education .cards .card {
+        width: 180px;
+        height: 270px;
+    }
+    .history .card {
+        width: 70%;
+        height: 100%;
+    }
+    .interests .btn2 {
+        top: 78%;
+        right: -1%;
+    }
+    footer h1 {
+        font-size: 1rem;
+    }
+    .container .picture {
+        width: 36%;
+        height: 20%;
+    }
+}
+@media screen and (max-width:250px){
+    .home .information h1 {
+        font-size: 1.5rem;
+    }
+    .navbar-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .navbar-icon-exit img{
+        width: 40px;
+        height: 40px;
+    }
+    .section-title h1 {
+        font-size: 1.7rem;
+    }
+    .education .cards .card {
+        width: 133px;
+        height: 170px;
+    }
+    .education .cards .third {
+        transform: translateX(-141px) rotateY(-30deg) scale(.99);
+    }
+    .education .cards .first {
+        transform: translateX(144px) rotateY(30deg) scale(.99);
+    }
+    .history {
+        height: 180vh;
+    }
+    .history .card {
+        width: 80%;
+        height: 84%;
+    }
+    .interests .inform-side p {
+        font-size: 0.5rem;
+        font-weight: 300;
+    }
+    .interests .inform-side h1 {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+    .interests .btn1 {
+        top: 34%;
+        right: -1%;
+    }
+    .interests .btn {
+        width: 13px;
+        height: 13px;
+    }
+    .container .main-card {
+        width: 80%;
+        height: 69%;
+    }
+    .contacts .button {
+        width: 38%;
+        height: 5%;
+    }
+    .contacts .message-box{
+        width: 87%;
+        height: 58%;
+    }
+    .contacts textarea{
+        max-width: 79%;
+        max-height: 128px;
+    }
+    form input{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
